@@ -4,6 +4,8 @@ hbiApp.controller('productListController', ['$scope','$http', 'productlistServic
 		productlistService.getProducts($stateParams.categoryId)  // get all products based on category
 		.then(function(response) {
 			$scope.products = response.data.results;
+			console.log("$scope.products");
+			console.log($scope.products);
 		});
 	}
     

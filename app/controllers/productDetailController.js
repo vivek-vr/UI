@@ -1,4 +1,4 @@
-hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state', 'productlistService', '$stateParams' , function($scope, $http, $q, $state, productlistService, $stateParams) {
+hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state', 'productlistService', '$stateParams' , 'productdetailService' , function($scope, $http, $q, $state, productlistService, $stateParams, productdetailService) {
 	
 	$scope.init = function(){ 
 		console.log("Product Details");
@@ -7,8 +7,9 @@ hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state',
 	$scope.productDetail = function() { 
 	    var productId = $stateParams.productId;
         $state.go("product-detail");	
-		productlistService.getProductsById(productId).then(function(response, status, headers, config) {
-           console.log($scope.masterDataObj);				
+		productdetailService.getProductsById(productId).then(function(response, status, headers, config) {         
+           $scope.masterDataObj = response.data.masterData.current;
+           console.log($scope.masterDataObj);
 		}).catch(function(response, status, headers, config) {
 		   console.log(response);	  
 		})

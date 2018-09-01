@@ -42,6 +42,10 @@ hbiApp.controller('headerController', ['$scope', 'productlistService','headerSer
 	})
 	}
 	
+	$scope.isObjectEmpty = function(card){
+	   return Object.keys(card).length === 0;
+	}
+	
 	function setAuthorizationCode(){
 		headerService.setAuthCode().then(function mySuccess(response) {
 			var configData = {};

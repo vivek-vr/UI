@@ -1,0 +1,492 @@
+<div ng-controller="headerController" ng-init="init()">
+	
+</div>
+
+ <div class="ajax-loader-bg" style="display:none"></div> 
+ <div class="ajax-loader" style="display:none;"></div> 
+ <div id="popup-container" style="display:none"> 
+ <div class="modal-container">
+ <div id="popup-bg" class="modal-bg"></div> 
+ <div class="modal-content-wrapper"> 
+ <div class="modal-content-cell"> 
+ <div id="popup-content" class="modal-content"></div> 
+ </div>
+ </div>
+ </div> 
+ </div>
+ <!--[if (lt IE 9)&(!IEMobile)]><div class="update-browser"><span>Your browser is not supported, please <a href="https://www.browsehappy.com" target="blank">upgrade your browser</a> to ensure you can use this site</span></div><![endif]--> 
+ <header role="banner" class="js-main-header clearfix"> 
+ <div class="boxRegistration">
+ <b>Woo hoo!</b> - You have now successfully registered with us. Enjoy your shopping
+ </div>  
+ <nav class="utility-nav clearfix mobile-hidden"> 
+ <div class="page"> 
+ <a href="#content" title="Skip to content" id="skiplinks" class="visuallyhidden focusable local" tabindex="1"> 
+ <span>Skip to main content</span> 
+ </a> 
+ <ul class="utility-nav-list">  
+ <li class="nav-item login-nav-item large-vp">
+ <div class="split"> 
+ <a href="/my-account/login.jsp?myaccount=true" title="My Account" class="lnk-my-account modal-registration-btn" data-islogged="0"> <span class="ico-s ico-14 ico-account"></span>My account </a> 
+ <a href="/my-account/registration.jsp" title="Register" class="lnk-register"> Register </a>  
+ </div>
+ </li>
+ <li class="nav-item rfl-nav-item large-vp "> 
+ <a href="/my-account/rflLanding.jsp" title="rewards"> 
+ <span class="ico-s ico-20 ico-header-rfl"></span> <span class="rfl-nav-item-label"> rewards for life </span> 
+ </a> 
+ </li>
+ <li class="nav-item favs-nav-item large-vp">  
+ <a href="/myFavourites.jsp" title="favourites"> 
+ <span class="ico-s ico-favs-menu"></span> Favourites <span class="qty"> 0 </span>
+ </a>  
+ </li>  
+ <li class="nav-item basket-nav-item"> 
+ <a class="js-header-basket-link" href="/basket/basket.jsp" data-ajax-url="/modules/ajax/mini-basket.jsp" data-refresh-url="/modules/ajax/basket-masthead.jsp">
+ <span class="ico-s ico-basket"></span>
+ <h2> Basket </h2>
+ <span class="at-basket-menu-qty qty"> 0 </span> 
+ items <span class="price"> £0.00 </span> 
+ <span class="ico ico-basket-down"></span> 
+ </a> 
+ </li> 
+ <li class="nav-item currency-nav-item large-vp">  
+ <span class="small-vp"> Show site in:
+</span> 
+<form id="changeCurrencyForm" name="changeCurrencyForm" action="/browse/gadgets/currencyExchangeContent.jsp?_DARGS=/browse/gadgets/currencyExchangeContent.jsp" method="post">
+<input name="_dyncharset" value="UTF-8" type="hidden"></input>
+<input name="_dynSessConf" value="5911380154507072079" type="hidden"></input> 
+<div class="split">
+  <a href="javascript:void(0);" class="show-gbp current" value="pounds" title="Pound">£</a> 
+  <a href="javascript:changeCurrency('EUR');" class="show-eur" value="euros" title="Euro">€</a> 
+  </div> 
+  <input id="existingCurrencyType" name="existingCurrencyType" value="" type="hidden">
+  <input name="_D:existingCurrencyType" value=" " type="hidden">
+  <input id="selectedCurrencyType" name="selectedCurrencyType" value="" type="hidden">
+  <input name="_D:selectedCurrencyType" value=" " type="hidden">
+  <input name="/com/nbty/commerce/common/CurrencyConverterFormHandler.currencyConverterSuccessURL" value="/home.jsp" type="hidden">
+  <input name="_D:/com/nbty/commerce/common/CurrencyConverterFormHandler.currencyConverterSuccessURL" value=" " type="hidden">
+  <input name="/com/nbty/commerce/common/CurrencyConverterFormHandler.currencyConverterErrorURL" value="/home.jsp" type="hidden">
+  <input name="_D:/com/nbty/commerce/common/CurrencyConverterFormHandler.currencyConverterErrorURL" value=" " type="hidden">
+  <input name="/com/nbty/commerce/common/CurrencyConverterFormHandler.changeCurrency" value="submit" type="hidden">
+  <input name="_D:/com/nbty/commerce/common/CurrencyConverterFormHandler.changeCurrency" value=" " type="hidden">
+  <input name="_DARGS" value="/browse/gadgets/currencyExchangeContent.jsp" type="hidden"></input>
+  </form>
+  </li> 
+  </ul>
+  </div>
+  </nav> 
+  <div class="branding clearfix"> 
+  <div class="page mobile-navigation-holder"> 
+  <div id="mobile-navigation-header-logo-holder" class="desktop-hidden"> 
+  <div id="mobile-navigation-header-logo"> 
+  <a href="/" title="Holland & Barrett :: the good life" class="mobile" style="background: url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/logos/hb-logo-initials.svg) center center no-repeat;background-image: linear-gradient(transparent, transparent), url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/logos/hb-logo-initials.svg);background-size: auto 30px;"></a>
+  <a href="/" title="Holland & Barrett :: the good life" class="tablet" style="background: url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/logos/hb-logo-full.svg) center center no-repeat;background-image: linear-gradient(transparent,transparent),url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/logos/hb-logo-full.svg);background-size: contain;"></a>
+  </div> 
+  </div>
+  <a href="/" class="logotype mobile-hidden"> <img src="app/assets/img/main-logo-hb.png" title="Holland & Barrett :: the good life"> </a>                         
+
+ 
+    <script type="application/ld+json">
+    { "@context" : "http://schema.org",
+      "@type" : "Organization",
+      "legalName" : "Holland and Barrett",
+      "url" : "https://www.hollandandbarrett.com",
+      "logo": "app/assets/img/main-logo-hb.png",
+      "sameAs" : ["https://www.facebook.com/hollandandbarrett",
+      "https://twitter.com/holland_barrett",
+      "https://plus.google.com/+hollandandbarrett",
+      "https://www.youtube.com/user/hollandandbarrettuk",
+      "https://www.linkedin.com/company/holland-&-barrett"],
+      "contactPoint" : [{
+      "@type" : "ContactPoint",
+      "telephone" : "+443706066606",
+      "contactType" : "customer service"}]
+
+    }
+    </script>
+  
+ 
+
+ <ul class="mobile-navigation desktop-hidden"> 
+ <li> 
+ <div id="mobile-navigation-header-logo-btn" class="open"> 
+ <span class="icon-bars"><span></span><span></span><span></span><span></span></span>
+ <span class="icon-text">Menu</span>
+ </div>
+ </li>  
+ <li> 
+ <a href="/my-account/login.jsp?myaccount=true" title="My Account" class="lnk-my-account modal-registration-btn" data-islogged="0">
+ <span class="ico-s ico-25" style="background-image: url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/icons/account.svg);"></span> 
+ <span class="icon-text">Account</span>
+ </a>
+ </li> 
+ <li class="mobile-navigation-logo-container">  
+ <div id="mobile-navigation-header-logo-holder" class="desktop-hidden"> 
+ <div id="mobile-navigation-header-logo"> 
+ <a href="/" title="Holland & Barrett :: the good life" class="mobile" style="background: url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/logos/hb-logo-initials.svg) center center no-repeat;background-image: linear-gradient(transparent, transparent), url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/logos/hb-logo-initials.svg);background-size: auto 30px;"></a>
+ <a href="/" title="Holland & Barrett :: the good life" class="tablet" style="background: url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/logos/hb-logo-full.svg) center center no-repeat;background-image: linear-gradient(transparent,transparent),url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/logos/hb-logo-full.svg);background-size: contain;"></a> 
+ </div> 
+ </div>
+ <a href="/" class="logotype mobile-hidden">  <img src="app/assets/img/main-logo-hb.png" title="Holland & Barrett :: the good life"> </a> 
+ </li>
+ <li>
+ <a href="/stores/storeLocator.jsp" title="Store Locator">
+ <span class="ico-s ico-25" style="background-image: url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/icons/map-pin.svg);"></span> 
+ <span class="icon-text">Store</span> 
+ </a> 
+ </li> 
+ <li class="nav-item basket-nav-item">
+ <a class="block js-header-basket-link" href="/basket/basket.jsp" data-ajax-url="/modules/ajax/mini-basket.jsp" data-refresh-url="/modules/ajax/basket-masthead.jsp">
+ <span class="ico-s ico-25" style="background-image: url(https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/ui/global/header/icons/basket.svg);">  </span> 
+ <span class="icon-text">Basket</span>
+ </a>
+ </li>
+ </ul>
+ <nav class="utility-nav utility-nav-sticky clearfix mobile-hidden"> 
+ <ul class="utility-nav-list">  
+ <li class="nav-item basket-nav-item"> 
+ <a class="js-header-basket-link" href="/basket/basket.jsp" data-ajax-url="/modules/ajax/mini-basket.jsp" data-refresh-url="/modules/ajax/basket-masthead.jsp">
+ <span class="ico-s ico-basket"></span>
+ <h2> Basket </h2> 
+ <span class="at-basket-menu-qty qty"> 0 </span>
+ items <span class="price"> £0.00 </span> 
+ <span class="ico ico-basket-down"></span>
+ </a> 
+ </li>  
+ <li class="nav-item currency-nav-item large-vp"> 
+ <span class="small-vp"> 
+ Show site in:
+</span> 
+<form id="changeCurrencyForm" name="changeCurrencyForm" action="/browse/gadgets/currencyExchangeContent.jsp?_DARGS=/browse/gadgets/currencyExchangeContent.jsp" method="post">
+<input name="_dyncharset" value="UTF-8" type="hidden"></input>
+<input name="_dynSessConf" value="5911380154507072079" type="hidden"></input> 
+<div class="split"> 
+ <a href="javascript:void(0);" class="show-gbp current" value="pounds" title="Pound">£</a> 
+ <a href="javascript:changeCurrency('EUR');" class="show-eur" value="euros" title="Euro">€</a>
+ </div>
+ <input id="existingCurrencyType" name="existingCurrencyType" value="" type="hidden">
+ <input name="_D:existingCurrencyType" value=" " type="hidden">
+ <input id="selectedCurrencyType" name="selectedCurrencyType" value="" type="hidden">
+ <input name="_D:selectedCurrencyType" value=" " type="hidden">
+ <input name="/com/nbty/commerce/common/CurrencyConverterFormHandler.currencyConverterSuccessURL" value="/home.jsp" type="hidden">
+ <input name="_D:/com/nbty/commerce/common/CurrencyConverterFormHandler.currencyConverterSuccessURL" value=" " type="hidden">
+ <input name="/com/nbty/commerce/common/CurrencyConverterFormHandler.currencyConverterErrorURL" value="/home.jsp" type="hidden">
+ <input name="_D:/com/nbty/commerce/common/CurrencyConverterFormHandler.currencyConverterErrorURL" value=" " type="hidden">
+ <input name="/com/nbty/commerce/common/CurrencyConverterFormHandler.changeCurrency" value="submit" type="hidden">
+ <input name="_D:/com/nbty/commerce/common/CurrencyConverterFormHandler.changeCurrency" value=" " type="hidden">
+ <input name="_DARGS" value="/browse/gadgets/currencyExchangeContent.jsp" type="hidden"></input>
+ </form>
+ </li> 
+ </ul>
+ </nav>
+ <div class="desktop-hidden usp-block">
+ <p>
+	Free Standard delivery on orders over &pound;20
+	</p>
+	</div> 
+	<span class=" global-search">
+	<form onsubmit="return searchFieldValidate()" action="/search" method="GET" class="site-search-form">  
+	<div class="search-form" role="search" id="site-search" data-json-submit-uri="/common/typeAhead.jsp" data-search-for-label="Search for">  
+	<div class="flex">
+	<label class="text" title="Search"> 
+	<span class="visuallyhidden">Search</span>
+	<input type="search" name="query" id="sitesearch" maxlength="128" placeholder="Search"/> 
+	<input type="hidden" name="isSearch" id="isSearch" value="true"/> 
+	<button type="submit" class="orangeSubmit" title="search button">
+	<span class="ico-s ico-25 ico-search"></span>
+	</button> 
+	</label> 
+	<div class="paGoBtnhide">
+	</div>  
+	<div class="voice-search-activate-btn ico-s ico-mic js-voice-search-activate hidden" data-locale="en" data-error-message="Couldn't understand, please try again"></div>
+	</div> </div> 
+	</form>
+	</span>
+	<div class="additional-info-wrapper mobile-hidden">                         
+    <span class="nav-item phone-nav-item">  
+	<span class="ico-s ico-phone" style="background-image: url(https://www.hollandandbarrett.com/ui/css/img/icons/phone_icon.svg);"></span> 
+	<a class="phone-link" title="Customer Support Number" href="tel:0370 606 6606"> 0370 606 6606 </a> 
+	</span> 
+ <span class="nav-item locator-nav-item">  
+ <span class="ico-s ico-location-pin"></span>
+ <a href="/stores/storeLocator.jsp" title="Store Locator" data-string-largevp="Store locator">
+ <span class="icon-text">Store locator</span>
+ </a>
+ </span>
+ </div> 
+ </div> 
+ </div> 
+ <nav class="main-nav replete-nav" aria-label="Main menu" role="navigation">
+ <div class="page">
+ 
+ 
+ 
+ 
+ <ul role="menubar"> 
+ <li class="main-nav-item" role="menuitem" aria-haspopup="true" data-all-text="All">
+ <a ui-sref="productlist({categoryId:'c2b602b3-8bf6-444f-a958-27a9e375d90d'})"> Vitamins & Supplements </a>  
+ <input type="hidden" id="600" class="urlRef" value="/vitamins-supplements/"/> 
+ <input type="hidden" class="dataId" value="fly600"/> 
+ <div id="fly600"> 
+ <div class="flyout-container"> <div class="flyout-nav f-row"> 
+ <div class="f-col f-col-1 flyout-nav-column flyout-column-background "> 
+ <div class="flyout-nav-block">  
+ <h2 class="mobile-nav-item loaded"> 
+ <a href="/shop/vitamins-supplements/condition/" title="Shop by condition"> Shop by condition <span class="desktop-hidden ico-c ico-chevron ico-chevron-right">
+ </span> </a> </h2>  <ul class="link-list" role="menu" data-level="3"> <li><a class="mobile-nav-item-back" href="#">
+ <span class="desktop-hidden ico-c ico-chevron ico-chevron-left"></span>Shop by condition</a></li>
+ <li role="menuitem" class="desktop-hidden"> <a href="/shop/vitamins-supplements/condition/" title="Shop by condition"> All Shop by condition </a>
+ </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/allergy-hay-fever-care/" title="Allergy &amp; Hay Fever Care">
+ Allergy &amp; Hay Fever Care </a> </li> 
+ <li role="menuitem"> 
+ <a href="/shop/vitamins-supplements/condition/bone-muscle-health/" title="Bone &amp; Muscle Health"> Bone &amp; Muscle Health </a>
+ </li>
+ <li role="menuitem">
+ <a href="/shop/vitamins-supplements/condition/brain-memory-support/" title="Brain &amp; Memory Support"> Brain &amp; Memory Support </a> </li>  
+ <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/children-s-health/" title="Children's Health"> Children's Health </a> </li>
+ <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/cold-immune-support/" title="Cold &amp; Immune Support"> Cold &amp; Immune Support </a>
+ </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/digestive-health/" title="Digestive Health"> Digestive Health </a> </li>  
+ <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/fatigue/" title="Fatigue"> Fatigue </a> </li>  <li role="menuitem"> 
+ <a href="/shop/vitamins-supplements/condition/first-aid/" title="First Aid"> First Aid </a> </li>  <li role="menuitem">  
+ <a href="/shop/vitamins-supplements/condition/hair-skin-nails/" title="Hair, Skin &amp; Nails"> Hair, Skin &amp; Nails </a> </li> 
+ <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/circulation/" title="Heart &amp; Circulation Support"> Heart &amp; Circulation Support </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/liver-care/" title="Liver Care"> Liver Care </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/men-s-health/" title="Men's Health"> Men's Health </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/mood-support/" title="Mood Support"> Mood Support </a> </li>  </ul>  </div>  </div>  <div class="f-col f-col-1 flyout-nav-column flyout-column-background ">  <div class="flyout-nav-block">  <ul class="link-list" role="menu" data-level="3" data-level-continue="true">  <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/pain-relief/" title="Pain Relief"> Pain Relief </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/sexual-health/" title="Sexual Health"> Sexual Health </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/sleep-relaxation/" title="Sleep &amp; Relaxation"> Sleep &amp; Relaxation </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/stress/" title="Stress"> Stress </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/vision/" title="Eye Health &amp; Vision Support"> Eye Health &amp; Vision Support </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/water-retention/" title="Water Retention"> Water Retention </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/condition/women-s-health/" title="Women's Health"> Women's Health </a> </li>  </ul>  </div>  </div>  <div class="f-col f-col-1 flyout-nav-column ">  <div class="flyout-nav-block">  <h2 class="mobile-nav-item loaded"> <a href="/shop/vitamins-supplements/vitamins/" title="Vitamins"> Vitamins <span class="desktop-hidden ico-c ico-chevron ico-chevron-right"></span> </a> </h2>  <ul class="link-list" role="menu" data-level="3"> <li><a class="mobile-nav-item-back" href="#"><span class="desktop-hidden ico-c ico-chevron ico-chevron-left"></span>Vitamins</a></li> <li role="menuitem" class="desktop-hidden"> <a href="/shop/vitamins-supplements/vitamins/" title="Vitamins"> All Vitamins </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/vitamins/multivitamins/" title="Multivitamins"> Multivitamins </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/vitamins/vitamin-a/" title="Vitamin A"> Vitamin A </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/vitamins/vitamin-b/" title="Vitamin B"> Vitamin B </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/vitamins/vitamin-c/" title="Vitamin C"> Vitamin C </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/vitamins/vitamin-d/" title="Vitamin D"> Vitamin D </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/vitamins/vitamin-e/" title="Vitamin E"> Vitamin E </a> </li>  </ul>  </div>  <div class="flyout-nav-block">  <h2 class="mobile-nav-item loaded"> <a href="/shop/vitamins-supplements/minerals/" title="Minerals"> Minerals <span class="desktop-hidden ico-c ico-chevron ico-chevron-right"></span> </a> </h2>  <ul class="link-list" role="menu" data-level="3"> <li><a class="mobile-nav-item-back" href="#"><span class="desktop-hidden ico-c ico-chevron ico-chevron-left"></span>Minerals</a></li> <li role="menuitem" class="desktop-hidden"> <a href="/shop/vitamins-supplements/minerals/" title="Minerals"> All Minerals </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/minerals/calcium/" title="Calcium"> Calcium </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/minerals/chromium/" title="Chromium"> Chromium </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/minerals/iron/" title="Iron"> Iron </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/minerals/magnesium/" title="Magnesium"> Magnesium </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/minerals/selenium/" title="Selenium"> Selenium </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/minerals/zinc/" title="Zinc"> Zinc </a> </li>  </ul>  </div>  </div>  <div class="f-col f-col-1 flyout-nav-column ">  <div class="flyout-nav-block">  <h2 class="mobile-nav-item loaded"> <a href="/shop/vitamins-supplements/supplements/" title="Supplements"> Supplements <span class="desktop-hidden ico-c ico-chevron ico-chevron-right"></span> </a> </h2>  <ul class="link-list" role="menu" data-level="3"> <li><a class="mobile-nav-item-back" href="#"><span class="desktop-hidden ico-c ico-chevron ico-chevron-left"></span>Supplements</a></li> <li role="menuitem" class="desktop-hidden"> <a href="/shop/vitamins-supplements/supplements/" title="Supplements"> All Supplements </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/5-htp/" title="5 HTP"> 5 HTP </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/acidophilus-friendly-bacteria/" title="Acidophilus &amp; Friendly Bacteria"> Acidophilus &amp; Friendly Bacteria </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/aloe-vera/" title="Aloe Vera"> Aloe Vera </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/apple-cider/" title="Apple Cider"> Apple Cider </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/arnica/" title="Arnica"> Arnica </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/charcoal/" title="Charcoal"> Charcoal </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/chondroitin-msm/" title="Chondroitin &amp; MSM"> Chondroitin &amp; MSM </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/co-enzyme-q10/" title="Co Enzyme Q10"> Co Enzyme Q10 </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/collagen-silica/" title="Collagen &amp; Silica"> Collagen &amp; Silica </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/enzymes/" title="Enzymes"> Enzymes </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/evening-primrose-oil/" title="Evening Primrose Oil"> Evening Primrose Oil </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/fibre-supplements/" title="Fibre Supplements"> Fibre Supplements </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/garlic/" title="Garlic"> Garlic </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/ginkgo-biloba/" title="Ginkgo Biloba"> Ginkgo Biloba </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/glucomannan/" title="Glucomannan"> Glucomannan </a> </li>  </ul>  </div>  </div>  <div class="f-col f-col-1 flyout-nav-column ">  <div class="flyout-nav-block">  <ul class="link-list" role="menu" data-level="3" data-level-continue="true">  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/glucosamine/" title="Glucosamine"> Glucosamine </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/grapeseed-extract/" title="Grapeseed Extract"> Grapeseed Extract </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/horny-goat-weed/" title="Horny Goat Weed"> Horny Goat Weed </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/lecithin/" title="Lecithin"> Lecithin </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/omega-fish-oils/" title="Omega &amp; Fish Oils"> Omega &amp; Fish Oils </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/peppermint-oil/" title="Peppermint Oil"> Peppermint Oil </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/pet-supplements/" title="Pet Supplements"> Pet Supplements </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/plant-sourced-supplements/" title="Plant Sourced Supplements"> Plant Sourced Supplements </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/raspberry-ketones/" title="Raspberry Ketones"> Raspberry Ketones </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/saw-palmetto/" title="Saw Palmetto"> Saw Palmetto </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/superfood-supplements/" title="Superfood Supplements"> Superfood Supplements </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/supplements/plant-sourced-supplements/turmeric/" title="Turmeric"> Turmeric </a> </li>  </ul>  </div>  <div class="flyout-nav-block">  <h2 class="mobile-nav-item loaded"> <a href="/shop/vitamins-supplements/homeopathic-flower-remedies/" title="Homeopathic &amp; Flower Remedies"> Homeopathic &amp; Flower Remedies <span class="desktop-hidden ico-c ico-chevron ico-chevron-right"></span> </a> </h2>  <ul class="link-list" role="menu" data-level="3"> <li><a class="mobile-nav-item-back" href="#"><span class="desktop-hidden ico-c ico-chevron ico-chevron-left"></span>Homeopathic &amp; Flower Remedies</a></li> <li role="menuitem" class="desktop-hidden"> <a href="/shop/vitamins-supplements/homeopathic-flower-remedies/" title="Homeopathic &amp; Flower Remedies"> All Homeopathic &amp; Flower Remedies </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/homeopathic-flower-remedies/flower-remedies/" title="Flower Remedies"> Flower Remedies </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/homeopathic-flower-remedies/homeopathic-remedies/" title="Homeopathic Remedies"> Homeopathic Remedies </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/homeopathic-flower-remedies/rescue-remedy/" title="Rescue Remedy"> Rescue Remedy </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/homeopathic-flower-remedies/tissue-salts/" title="Tissue Salts"> Tissue Salts </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/homeopathic-flower-remedies/cbd/" title="CBD+ Oil"> CBD+ Oil </a> </li>  </ul>  </div>  </div>  <div class="f-col f-col-1 flyout-nav-column ">  <div class="flyout-nav-block">  <h2 class="mobile-nav-item loaded"> <a href="/shop/vitamins-supplements/herbal-licensed-remedies/" title="Herbal &amp; Licensed Remedies"> Herbal &amp; Licensed Remedies <span class="desktop-hidden ico-c ico-chevron ico-chevron-right"></span> </a> </h2>  <ul class="link-list" role="menu" data-level="3"> <li><a class="mobile-nav-item-back" href="#"><span class="desktop-hidden ico-c ico-chevron ico-chevron-left"></span>Herbal &amp; Licensed Remedies</a></li> <li role="menuitem" class="desktop-hidden"> <a href="/shop/vitamins-supplements/herbal-licensed-remedies/" title="Herbal &amp; Licensed Remedies"> All Herbal &amp; Licensed Remedies </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/herbal-licensed-remedies/agnus-castus/" title="Agnus Castus"> Agnus Castus </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/herbal-licensed-remedies/black-cohosh/" title="Black Cohosh"> Black Cohosh </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/herbal-licensed-remedies/dandelion/" title="Dandelion"> Dandelion </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/herbal-licensed-remedies/devil-s-claw/" title="Devil's Claw"> Devil's Claw </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/herbal-licensed-remedies/echinacea/" title="Echinacea"> Echinacea </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/herbal-licensed-remedies/ginseng-guarana/" title="Ginseng &amp; Guarana"> Ginseng &amp; Guarana </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/herbal-licensed-remedies/milk-thistle/" title="Milk Thistle"> Milk Thistle </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/herbal-licensed-remedies/st-john-s-wort/" title="St John's Wort"> St John's Wort </a> </li>  <li role="menuitem">  <a href="/shop/vitamins-supplements/herbal-licensed-remedies/valerian/" title="Valerian"> Valerian </a> </li>  </ul>  </div>  <div class="flyout-nav-block">  <h2> <a href="/shop/vitamins-supplements/new-in-vitamins-supplements/" title="New In: Vitamins &amp; Supplements"> New In: Vitamins &amp; Supplements </a> </h2>  </div>  <div class="flyout-nav-block">  <h2> <a href="//www.hollandandbarrett.com/shop/product-group/trending/" title="Trending Products"> Trending Products </a> </h2>  </div>  <div class="flyout-nav-block">  <h2> <a href="//www.hollandandbarrett.com/shop/vitamins-supplements/vegan-vitamins-supplements/" title="Vegan Vitamins &amp; Supplements"> Vegan Vitamins &amp; Supplements </a> </h2>  </div>  <div class="flyout-nav-block">  <h2> <a href="/shop/offers/online-exclusives/" title="Online Exclusives"> Online Exclusives </a> </h2>  </div>  <div class="flyout-nav-block">  <h2> <a href="/shop/vitamins-supplements/vitamins-supplements-shop-all/" title="Vitamins &amp; Supplements Shop All"> Vitamins &amp; Supplements Shop All </a> </h2>  </div>  </div>  </div> <div class="f-row"><div class="f-col f-col-1"></div><div class="f-col f-col-1"></div><div class="f-col f-col-1"></div><div class="f-col f-col-1"></div><div class="f-col f-col-1"></div><div class="f-col f-col-1"></div></div>  <div class="flyout-nav-images f-row"> <div class="f-col f-col-6">  <a href="/shop/vitamins-supplements/vitamins-supplements-shop-all/?t=skupromo_big-deals-better-than-half-price&amp;icmp=Global_HPR_1_P13_1_big_deals_ie" class="flyout-brand" style="background-image: url('https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/p_1718/p13/globals/p13_globals_big_deals_desktop_update.png')"></a>  </div> </div>  </div> 
+ 
+ </div> 
+ </li>
+ <li class="main-nav-item" role="menuitem" aria-haspopup="true" data-all-text="All"> 
+ <a href="/shop/food-drink/"> Food & Drink </a> 
+ <input type="hidden" id="100" class="urlRef" value="/food-drink/"/> 
+ <input type="hidden" class="dataId" value="fly100"/>
+ <div id="fly100"></div> 
+ </li> 
+ <li class="main-nav-item" role="menuitem" aria-haspopup="true" data-all-text="All">
+ <a href="/shop/sports-nutrition/"> Sports Nutrition </a>
+ <input type="hidden" id="500" class="urlRef" value="/sports-nutrition/"/> 
+ <input type="hidden" class="dataId" value="fly500"/> 
+ <div id="fly500"></div> 
+ </li>
+ <li class="main-nav-item" role="menuitem" aria-haspopup="true" data-all-text="All"> 
+ <a href="/shop/free-from/"> Free From </a> 
+ <input type="hidden" id="200" class="urlRef" value="/free-from/"/> 
+ <input type="hidden" class="dataId" value="fly200"/> 
+ <div id="fly200"> </div>
+ </li>  
+ <li class="main-nav-item" role="menuitem" aria-haspopup="true" data-all-text="All">
+ <a href="/shop/natural-beauty/"> Natural Beauty </a> 
+ <input type="hidden" id="300" class="urlRef" value="/natural-beauty/"/> 
+ <input type="hidden" class="dataId" value="fly300"/> 
+ <div id="fly300"></div> 
+ </li> 
+ <li class="main-nav-item" role="menuitem" aria-haspopup="true" data-all-text="All"> 
+ <a href="/shop/weight-management/"> Weight Management </a> 
+ <input type="hidden" id="700" class="urlRef" value="/weight-management/"/>
+ <input type="hidden" class="dataId" value="fly700"/> 
+ <div id="fly700"></div>
+ </li> 
+ <li class="main-nav-item" role="menuitem" aria-haspopup="true" data-all-text="All"> 
+ <a href="/shop/offers/"> Offers </a> 
+ <input type="hidden" id="19999" class="urlRef" value="/skupromo"/>
+ <input type="hidden" class="dataId" value="fly19999"/> 
+ <div id="fly19999"></div>
+ </li> 
+ <li class="main-nav-item simple-nav-item" role="menuitem"> 
+ <a href="/the-good-life-mot"> The Health Hub </a>
+ </li> 
+ <li class="main-nav-item simple-nav-item" role="menuitem">  
+ <style>
+
+@media screen and (min-width: 767px) {
+
+.main-nav [role=menubar] {
+
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+
+}
+
+.main-nav [role=menubar]:before {
+
+display: none;
+
+}
+
+.simple-nav-item.last-nav-item {
+
+position: static !important;
+
+}
+
+#fly666 .flyout-container {
+  display: none; 
+  padding: 24px;
+}
+
+#fly666 .flyout-container .f-row .flyout-nav-column h3, #fly666 .flyout-container .f-row .flyout-nav-column p {
+  text-align: center;
+}
+
+#fly666 .flyout-container .f-row .flyout-nav-column p {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+#fly666 .flyout-container .f-row .flyout-nav-column  img {
+  margin: 0 auto;
+}
+    
+.last-nav-item:hover > #fly666 .flyout-container {
+    display: block;
+}
+
+.last-nav-item:hover > a,  
+.ss-new-badge:hover ~ a, #fly666:hover  + .ss-flyout-bg + a   {
+
+background: #fff;
+color: #006341;
+
+}
+
+.last-nav-item:hover .ss-flyout-bg,  
+.ss-new-badge:hover + #fly666 + .ss-flyout-bg, #fly666:hover  + .ss-flyout-bg  {
+
+opacity: 0.6;
+height: 3000px;
+
+}
+
+.last-nav-item .ss-flyout-bg:hover {
+
+display: none;
+
+}
+
+.ss-flyout-bg {
+
+opacity: 0;
+position: fixed;
+width: 100%;
+height: 0px;
+background-color: #333;
+z-index: -1;
+left: 0;
+transition: opacity 0.5s;
+-webkit-transition: opacity 0.5s;
+-moz-transition: opacity 0.5s;
+-o-transition: opacity 0.5s;
+
+}
+
+.ss-buttons {
+
+justify-content: center;
+
+}
+
+.ss-buttons .healthbox-intro-buttons-container a:last-child {
+  background-color: #006341;
+  background: #006341;
+  border: 1px solid #006341;
+}
+.ss-buttons .healthbox-intro-buttons-container a:last-child:hover {
+  background-color: #004a30;
+  background: #004a30;
+  border: 1px solid #004a30;
+}
+
+.ss-buttons .healthbox-intro-buttons-container {
+  width: auto;
+}
+
+}
+
+@media screen and (max-width: 1075px) and (min-width: 768px) {
+
+.main-nav.replete-nav .main-nav-item>a {
+
+font-size: 1.2rem;
+
+}
+
+
+}
+
+</style>
+<div id="fly666">
+<div class="flyout-container">
+<div class="flyout-nav f-row">  
+<div class="f-col f-col-2 flyout-nav-column ">
+<img src="https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/healthbox/landing-page/images/healthbox-step-icon-1.png">
+      <h3>
+                                <strong>Step 1<br>
+        Complete our interactive consultation</strong></h3>
+      <p>
+        Take 10 minutes to tell us about your typical health habits and dietary requirements.</p> 
+</div>
+
+
+
+<div class="f-col f-col-2 flyout-nav-column "> 
+<img src="https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/healthbox/landing-page/images/healthbox-step-icon-2.png">
+      <h3>
+                                <strong>Step 2<br>
+        Receive personalised advice, with hints and tips</strong></h3>
+      <p>
+        View your health recommendations complete with your personalised products and wellbeing tips…</p>
+</div>
+
+
+
+<div class="f-col f-col-2 flyout-nav-column ">
+<img src="https://images.hollandandbarrettimages.co.uk/promotionuploads_new/hb/atg/healthbox/landing-page/images/healthbox-step-icon-3.png">
+      <h3>
+                                <strong>Step 3<br>
+        Choose the recommendations that suit you</strong></h3>
+      <p>
+        Select your product choices from the recommendations and how often you want to receive them.</p> 
+</div>
+
+</div>
+
+<div class="flyout-nav f-row ss-buttons">  
+<a class="button healthbox-button orangeSubmit" href="/healthbox/healthbox.jsp">Learn more</a>
+</div>
+</div>
+</div>
+<div class="ss-flyout-bg"></div>
+<a href="/healthbox/healthbox.jsp"> Healthbox </a> 
+ </li>  
+ </ul>
+ </div>
+ </nav> 
+ <div class="desktop-hidden mobile-hidden js-mobile-navigation-menu-item"> 
+ <li class="desktop-hidden account-nav-item" role="menuitem"> 
+ <a href="/my-account/login.jsp?myaccount=true" title="My Account" class="common-nav-item"> 
+ <i class="ico-s ico-14 ico-user"></i>
+ <span class="icon-text">Account</span>
+ </a>  
+ </li>
+ </div>  
+ </header> 
+
+  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!-- end common/header.hbs -->

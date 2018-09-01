@@ -1,4 +1,4 @@
-var hbiApp = angular.module('HBIapp', ['ui.router']);
+var hbiApp = angular.module('HBIapp', ['ui.router', 'ngSanitize']);
 
 hbiApp.config(function($stateProvider, $urlRouterProvider) {
 

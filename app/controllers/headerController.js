@@ -7,51 +7,56 @@ hbiApp.controller('headerController', ['$scope', 'productlistService','headerSer
 		var parentLevelList = [];
 		var firstLevelList = [];
 		var secondLevelList = [];
-		var categories = productlistService.getCategories()  // get all categories to list
-		.then(function(response) {
-			angular.forEach(response.data.results, function(item, key1) {
-				if(item.ancestors.length == 0){
-					parentLevelList.push(item);
-				} else if(item.ancestors.length == 1){
-					firstLevelList.push(item);
-				}else if(item.ancestors.length == 2){
-					secondLevelList.push(item);
-				}
-			});
-			finalItemsList = parentLevelList.concat(firstLevelList).concat(secondLevelList);
-			angular.forEach(finalItemsList, function(item, key1) {
-				if(item.ancestors.length == 0){
-					outputList.push(item);
-				} else if(item.ancestors.length == 1){
-					angular.forEach(item.ancestors, function(ancestor, key2) {
-						angular.forEach(outputList, function(parentItem, key1) {
-							if(!parentItem.children){
-								parentItem.children = [];
-							}
-							if(ancestor.id == parentItem.id){
-								parentItem.children.push(item);
-							}	
-														
-						});
-					});
-				}else if(item.ancestors.length == 2){
-					angular.forEach(item.ancestors, function(ancestor, key2) {
-						angular.forEach(outputList, function(firstLevelItem, key3) {
-							angular.forEach(firstLevelItem.children, function(secondLevelItem, key4) {
-								if(!secondLevelItem.children){
-									secondLevelItem.children = [];
+		var sessionCategoryList = headerService.sessionGet("menuCategoryList");
+		if(null != sessionCategoryList) {
+			$scope.menuTree = sessionCategoryList; 
+		} else {
+			var categories = productlistService.getCategories()  // get all categories to list
+			.then(function(response) {
+				angular.forEach(response.data.results, function(item, key1) {
+					if(item.ancestors.length == 0){
+						parentLevelList.push(item);
+					} else if(item.ancestors.length == 1){
+						firstLevelList.push(item);
+					}else if(item.ancestors.length == 2){
+						secondLevelList.push(item);
+					}
+				});
+				finalItemsList = parentLevelList.concat(firstLevelList).concat(secondLevelList);
+				angular.forEach(finalItemsList, function(item, key1) {
+					if(item.ancestors.length == 0){
+						outputList.push(item);
+					} else if(item.ancestors.length == 1){
+						angular.forEach(item.ancestors, function(ancestor, key2) {
+							angular.forEach(outputList, function(parentItem, key1) {
+								if(!parentItem.children){
+									parentItem.children = [];
 								}
-								if(ancestor.id == secondLevelItem.id){
-									secondLevelItem.children.push(item);
-								}														
+								if(ancestor.id == parentItem.id){
+									parentItem.children.push(item);
+								}	
+															
 							});
 						});
-					});
-				}
-			});
-		$scope.menuTree = outputList; 
-		
-	})
+					}else if(item.ancestors.length == 2){
+						angular.forEach(item.ancestors, function(ancestor, key2) {
+							angular.forEach(outputList, function(firstLevelItem, key3) {
+								angular.forEach(firstLevelItem.children, function(secondLevelItem, key4) {
+									if(!secondLevelItem.children){
+										secondLevelItem.children = [];
+									}
+									if(ancestor.id == secondLevelItem.id){
+										secondLevelItem.children.push(item);
+									}														
+								});
+							});
+						});
+					}
+				});
+				$scope.menuTree = outputList; 
+				headerService.sessionSet("menuCategoryList",outputList);
+			})
+		}
 	}
 	
 	$scope.isObjectEmpty = function(card){

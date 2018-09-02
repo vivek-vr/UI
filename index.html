@@ -8,19 +8,8 @@
 <meta name="author" content="">
 <meta name="generator" content="commercetools" />
 <title>Holland and Beckett Hackathon</title>
- <script src="app/lib/anglar1.7.js"></script>
-<script src="app/lib/ui-router.js"></script>
-<script src="app/lib/angular-sanitize.js"></script>
-<script src="app/app.js"></script>
-<script src="app/services/productlistService.js"></script>
-<script src="app/services/productdetailService.js"></script>
-<script src="app/services/headerService.js"></script>
-<script src="app/controllers/homeController.js"></script>
-<script src="app/controllers/headerController.js"></script>
-<script src="app/controllers/productListController.js"></script>
-<script src="app/controllers/productDetailController.js"></script>
-<script src="app/controllers/productDetailController.js"></script>
-<script src="app/controllers/checkoutController.js"></script>
+
+   
 <link rel="icon" href="app/assets/img/favicon.ico">
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -32,19 +21,26 @@
 <!-- <link href="app/assets/css/selectboxit.min-db6170754f9da8de6c95b8093801eb76.css" rel="stylesheet"> -->
 <!-- <link href="app/assets/css/main.min-d24f68954c56a21c1171d727193a023e.css" rel="stylesheet"> -->
 <link href="app/assets/css/global.css" rel="stylesheet">
+
 <link href="app/assets/css/healthbox.css" rel="stylesheet">
-<link href="app/assets/css/style.css" rel="stylesheet">
-<link href="app/assets/css/responsive.css" rel="stylesheet">
 <link href="app/assets/css/accountPopup.css" rel="stylesheet">
-
 <link href="app/assets/css/offers.css" rel="stylesheet">
-
-
 <link href="app/assets/css/screen.css" rel="stylesheet">
+<link href="app/assets/css/responsive.css" rel="stylesheet">
+<link href="app/assets/css/style.css" rel="stylesheet">
+
 <link rel="stylesheet" href="app/assets/css/sunrise.css"/>
 
 
-
+<script>
+if ( navigator.userAgent.match(/iPad/i) ) {
+			var viewportAttr = document.getElementById('viewport').getAttribute("content");
+			
+			if (viewportAttr.match(/initial-scale=1/i)) {
+				document.getElementById('viewport').setAttribute("content", "width=1000");
+			}
+		}
+</script>
 <style>
 
 .simple-nav-item.last-nav-item>a::before {
@@ -212,12 +208,45 @@ font-size: 1.2rem;
 display:none;
 }
 </style>
+
+
 </head>
 
 <body ng-app="HBIapp">
 <div ng-include="'views/includes/header.html'"></div>
 <div ui-view></div>
 <div ng-include="'views/includes/footer.html'"></div>
+<script src="app/lib/anglar1.7.js"></script>
+<script src="app/lib/ui-router.js"></script>
+<script src="app/lib/angular-sanitize.js"></script>
+<script src="app/app.js"></script>
+<script src="app/services/productlistService.js"></script>
+<script src="app/services/headerService.js"></script>				 
+<script src="app/controllers/homeController.js"></script>
+<script src="app/controllers/headerController.js"></script>
+<script src="app/controllers/productListController.js"></script>
+<script src="app/controllers/productDetailController.js"></script>
+<script src="app/controllers/checkoutController.js"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+ <script src="app/assets/js/modernizr-custom.js"></script>
+<script src="app/assets/js/jquery.plugins.combined.js" defer></script>
+<script src="app/assets/js/jquery.pubsub.js" defer></script>
+<script src="app/assets/js/slick.min.js"></script>
+<script src="app/assets/js/lazysizes.min.js"></script>
+<script src="app/assets/js/plugins.js"></script>
+<script src="app/assets/js/utils.js"></script>
+<script src="app/assets/js/utils.js"></script>
+<script src="app/assets/js/hab.js"></script>
+<script src="app/assets/js/init.js" defer></script>
+<script src="app/assets/js/voiceSearch.js"></script>
+<script src="app/assets/js/legacy.js" defer></script>
+<script src="app/assets/js/p13n.js"></script>
+<script src="app/assets/js/richRelevance.js"></script>
+<!-- <script src="app/assets/js/load.js"></script> -->
+
 
  
   <script>
@@ -323,30 +352,17 @@ display:none;
             isMobileApp: Boolean(false)
         };
     </script>
-    <script src="/app/assets/js/modernizr-custom.js?t=1534762332"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  
     <script>
         // Fallback to loading jQuery from a local path if the CDN is unavailable
         (window.jQuery || document.write('<script src="/ui/js/libs/jquery-1.8.2.min.js?t=1534762332"><\/script>'));
     </script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	 
     <script>
         // Fallback to loading jQuery UI from a local path if the CDN is unavailable
         (jQuery.ui || document.write('<script src="/ui/js/libs/jquery-ui-1.11.4.custom.min.js?t=1534762332"><\/script>'));
     </script>
-    <script src="app/assets/js/jquery.plugins.combined.js?t=1534762332" defer></script>
-    <script src="app/assets/js/slick.min.js?t=1534762332"></script>
-    <script src="app/assets/js/lazysizes.min.js?t=1534762332"></script>
-    <script src="app/assets/js/jquery.pubsub.js?t=1534762332" defer></script>
-    <script src="app/assets/js/sfr/plugins.js?t=1534762332"></script>
-    <script src="app/assets/js/sfr/utils.js?t=1534762332"></script>
-    <script src="app/assets/js/hab/utils.js?t=1534762332"></script>
-    <script src="app/assets/js/hab/hab.js?t=1534762332"></script>
-    <script src="app/assets/init.js?t=1534762332" defer></script>
-    <script src="app/assets/js/hab/voiceSearch.js?t=1534762332"></script>
-    <script src="app/assets/js/legacy.js?t=1534762332" defer></script>
-    <script src="app/assets/js/p13n.js"></script>
-    <script src="app/assets/js/richRelevance.js?t=1534762332"></script>
+   
     <script>
         var RR_CONFIG = {};
         RR_CONFIG.baseUrl = '//recs.richrelevance.com/rrserver/';
@@ -358,7 +374,7 @@ display:none;
         RR_CONFIG.userId = '';
         RR_CONFIG.sessionId = '842172e053bf4966954cc749aa3421693df7981732e349ffff46e683125cd819';
     </script>
-    <script src="app/assets/js/jsviews.js?t=1534762332"></script>
+    <script src="app/assets/js/jsviews.js"></script>
     <script id="rrProductCarouselHeader" type="text/x-jsrender">
         <h2 class="teaser-block-title">{{:strategy_message}}</h2>
     </script>

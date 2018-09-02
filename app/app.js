@@ -22,6 +22,11 @@ hbiApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/checkout',
 			params: {  },
             templateUrl: 'views/checkout.html'       
-        });
+        })
+		.state('basket', {
+            url: '/basket',			
+            templateUrl: 'views/basket.html'       
+        })
+		
 
 });

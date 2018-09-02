@@ -8,7 +8,7 @@ hbiApp.controller('productDetailController', ['$scope', '$http', '$q', '$state',
 	    // var productId = $stateParams.productId;
 	    var productId = headerService.sessionGet('productId');
         $state.go("product-detail");	
-		productdetailService.getProductsById(productId).then(function(response, status, headers, config) {         
+        productdetailService.getProductsById(productId).then(function(response, status, headers, config) {         
            $scope.masterDataObj = response.data.masterData.current;
            console.log($scope.masterDataObj);
            $scope.setProductData($scope.masterDataObj);

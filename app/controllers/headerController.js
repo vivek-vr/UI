@@ -53,4 +53,8 @@ hbiApp.controller('headerController', ['$scope', 'productlistService','headerSer
 			headerService.sessionSet("configData",configData);
 		});;
 	}
+	
+	$scope.setCategory = function(id) {
+		headerService.sessionSet("categoryId",id);
+	}
 }]);

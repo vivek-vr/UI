@@ -218,7 +218,7 @@
  <div ng-controller="headerController" ng-init="init()">
 	<ul role="menubar"> 
 		<li class="main-nav-item" ng-class="{'hover':hovering}" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false"role="menuitem" aria-haspopup="true" data-all-text="All" ng-repeat="(key, value) in menuTree"> 
-			<a ui-sref="productlist({categoryId:'{{value.id}}'})"> {{value.name.en}} </a> 
+			<a ui-sref="productlist({categoryId:'{{value.id}}'})"  ng-click="setCategory(value.id)"> {{value.name.en}} </a> 
 			<input type="hidden" id="{{value.externalId}}" class="urlRef" value="/food-drink/"/> 
 			<input type="hidden" class="dataId" value="fly{{value.externalId}}"/>
 			<div id="fly{{value.externalId}}">
